@@ -706,10 +706,9 @@ class PlayState extends MusicBeatState
 		flixel.util.FlxSpriteUtil.drawRect(barRect, 0,0,timeBar.width, timeBar.height, FlxColor.TRANSPARENT, {thickness:4, color:FlxColor.BLACK});
 		add(barRect);
 		timeBar.cameras = [camHUD];
-		timeBarBG
+		timeBarBG.cameras = [camHUD];
+		barRect.cameras = [camHUD];
 		 
-		
-
 		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
 		if (FlxG.save.data.downscroll)
 			healthBarBG.y = 50;
