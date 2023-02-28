@@ -694,11 +694,10 @@ class PlayState extends MusicBeatState
 		timeBarBG = new FlxSprite(0,50).loadGraphic(Paths.image('healthBar'));
 		if(FlxG.save.data.downscroll) timeBarBG.y = FlxG.height * 0.9;
 		timeBarBG.screenCenter(X);
-		add(timeBarBG);
 		timeBarBG.cameras = [camHUD];
 
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y+4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 100), Std.int(timeBarBG.height + 8), this,
-		 'FlxG.sound.music.length',0,2);
+		 'songLength',0,1);
 		 timeBar.createFilledBar(0x000000, dad.screwedColor);
 		add(timeBar);
 
