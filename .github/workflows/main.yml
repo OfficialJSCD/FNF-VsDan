@@ -81,7 +81,7 @@ jobs:
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
         shell: cmd
       - name: Compile
-        run: haxelib run lime build windows -release
+        run: haxelib run lime test windows -release
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
